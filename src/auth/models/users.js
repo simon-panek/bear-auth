@@ -17,7 +17,7 @@ users.virtual('token').get(function () {
   let tokenObject = {
     username: this.username,
   }
-  return jwt.sign(tokenObject, SECRET);
+  return jwt.sign(tokenObject, SECRET, { "expiresIn": "900000" }); //JWT to expire in 15 min
 });
 
 users.pre('save', async function () {
