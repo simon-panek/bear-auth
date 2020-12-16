@@ -33,7 +33,6 @@
 
 - This app uses JWT to authorize access to the `/users` and `/secret` routes
 - JSON Web Tokens are set to expire 15 minutes after creation
-- 
 
 #### Tests
 
