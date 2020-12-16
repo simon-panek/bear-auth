@@ -1,12 +1,15 @@
 'use strict';
 
+require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
-const users = new mongoose.Schema({
+//need to define a secret
+
+const users = mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-});
+}); //to json virtual here
 
 // Adds a virtual field to the schema. We can see it, but it never persists
 // So, on every user object ... this.token is now readable!
