@@ -24,8 +24,16 @@
 - `npm start`
 - `npm test`
 - Endpoints:
-  - `/signup` - Takes a username and password and stores the to the DB.
+  - `/signup` - Takes a username and password and stores the to the DB
   - `/signin` - Checks a username and password or token for a match in the DB, if valid allows access.
+  - `/users` - Returns all users in the database
+  - `/secret` - Grants access to a secret route
+
+#### Security
+
+- This app uses JWT to authorize access to the `/users` and `/secret` routes
+- JSON Web Tokens are set to expire 15 minutes after creation
+- 
 
 #### Tests
 
